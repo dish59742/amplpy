@@ -19,7 +19,7 @@ jobs:
     arch: arm64
     env: 
       - CIBW_BUILD=cp*-manylinux_aarch64
-      - CIBW_SKIP='pp* python3.5*'
+      - CIBW_SKIP='pp* cp35-*'
       - CIBW_TEST_COMMAND='PATH="/project/ampl:$PATH" python3 -m amplpy.tests'
   - services: docker
     arch: ppc64le
