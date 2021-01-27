@@ -20,6 +20,7 @@ jobs:
     env: 
       - CIBW_BUILD=cp38-manylinux_aarch64
       - CIBW_SKIP='pp*'
+      - AMPL_URL='https://ampl.com/demo/ampl.linux-arm64.tgz'
       - CIBW_TEST_COMMAND='PATH="/project/ampl:$PATH" python -m amplpy.tests'
   - services: docker
     arch: ppc64le
